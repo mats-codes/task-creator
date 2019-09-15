@@ -10,11 +10,15 @@ class SearchBar extends React.Component {
                 <TextField
                     label="Taskname"
                     variant="outlined"
+                    defaultValue={this.props.filterString}
                 />
                 <br/>
                 <FormControlLabel
                     control={
-                        <Checkbox value="onlyHighSev" />
+                        <Checkbox 
+                            value="onlyHighSev" 
+                            checked={this.props.showOnlyHighSeverity}
+                        />
                     }
                     label="Only High Severity"
                 />
@@ -24,3 +28,4 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+

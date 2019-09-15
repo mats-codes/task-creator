@@ -10,7 +10,12 @@ class SeveritySelctor extends React.Component {
         return (
             <div>
                 <InputLabel>Severity:</InputLabel>
-                <RadioGroup name="severity" row>
+                <RadioGroup 
+                    name="severity" 
+                    row
+                    onChange={this.props.changeHandler}
+                    value={this.props.severity}
+                >
                     <FormControlLabel
                         label="High"
                         value="high"
