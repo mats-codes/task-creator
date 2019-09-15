@@ -11,13 +11,15 @@ class SearchBar extends React.Component {
                     label="Taskname"
                     variant="outlined"
                     defaultValue={this.props.filterString}
+                    onChange={this.props.filterStringChangeHandler}
                 />
                 <br/>
                 <FormControlLabel
                     control={
                         <Checkbox 
-                            value="onlyHighSev" 
+                            value="onlyHighSev"
                             checked={this.props.showOnlyHighSeverity}
+                            onChange={this.props.severityChangeHandler}
                         />
                     }
                     label="Only High Severity"

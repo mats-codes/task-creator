@@ -14,9 +14,9 @@ class HeroSelector extends React.Component {
                     inputProps={{id: 'favHero'}}
                     onChange={this.props.changeHandler}
                 >
-                    <MenuItem value="ck">Coding Kid</MenuItem>
-                    <MenuItem value="ccw">Clean Code Women</MenuItem>
-                    <MenuItem value="bh">Bug Hunter</MenuItem>
+                    <MenuItem value="Coding Kid">Coding Kid</MenuItem>
+                    <MenuItem value="Clean Code Women">Clean Code Women</MenuItem>
+                    <MenuItem value="Bug Hunter">Bug Hunter</MenuItem>
                 </Select>
             </div>
         )

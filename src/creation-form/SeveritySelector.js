@@ -14,7 +14,7 @@ class SeveritySelctor extends React.Component {
                     name="severity" 
                     row
                     onChange={this.props.changeHandler}
-                    value={this.props.severity}
+                    defaultValue={this.props.severity}
                 >
                     <FormControlLabel
                         label="High"

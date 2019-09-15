@@ -10,9 +10,15 @@ class TaskCreationForm extends React.Component {
         this.state = {
             name: undefined,
             description: undefined,
-            favHero: 'ck',
+            favHero: 'Coding Kid',
             severity: undefined,
         };
+
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+        this.handleSeverityChange = this.handleSeverityChange.bind(this);
+        this.handleFavHeroChange = this.handleFavHeroChange.bind(this);
+        this.addTask = this.addTask.bind(this);
     }
 
 
@@ -21,23 +27,37 @@ class TaskCreationForm extends React.Component {
     }
 
     addTask() {
-        console.log("I'm superheroically clicked.");
+        const newTask = {
+            assignee: this.state.favHero,
+            title: this.state.name,
+            description: this.state.description,
+            severity: this.state.severity,
+        }
+        this.props.newTaskHandler(newTask);
     }
 
     handleNameChange(e) {
-        console.log(e.target.value);
+        this.setState({
+            name: e.target.value
+        });
     }
 
     handleDescriptionChange(e) {
-        console.log(e.target.value)
+        this.setState({
+            description: e.target.value
+        });
     }
 
     handleSeverityChange(e) {
-        console.log(e.target.value);
+        this.setState({
+            severity: e.target.value
+        });
     }
 
     handleFavHeroChange(e) {
-        console.log(e.target.value);
+        this.setState({
+            favHero: e.target.value
+        });
     }
 
     render() {
